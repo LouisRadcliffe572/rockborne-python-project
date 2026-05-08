@@ -1,0 +1,56 @@
+---- 03 Python Project: Game Development ----
+-- Louis Radcliffe --
+
+GitHub repository link: https://github.com/LouisRadcliffe572/rockborne-python-project.git
+
+My game is Noughts and Crosses
+Load Jupyter Notebook file or copy & paste script into chosen Python software
+
+Run "def game()" script to define game function
+Run "game()" to play the game
+
+"Input a player name:" as prompted
+"Input another player name:" as prompted
+Script will randomly decide which player goes first: "__ will go first!"
+"[first player], noughts or crosses? (o/x)" as prompted
+Script will lowercase input and check it is either 'o' or 'x'
+"[first player] is [noughts or crosses], [second player] is [crosses or noughts]."
+Empty game board will be printed
+
+"[first player], where would you like to play?" as prompted
+    Input format requires two consecutive letters representing row and column
+    For rows: t = top, m = middle, b = bottom
+    For columns: l = left, m = middle, r = right
+    e.g. 'tr' for top right, 'mm' for middle middle
+    Script will lowercase input and check it is a recognised position
+Updated board will be printed
+"[second player], where would you like to play?" as prompted
+    If position is already occupied, script will display an error message and prompt for a position again
+Updated board will be printed
+
+This process repeats until either a win condition has been met:
+    Three of the same character across a row, column or diagonal
+or the game is a draw:
+    All positions are occupied without a win condition being met
+"[winner] wins!" or "It's a draw! You'll have to play again!"
+"Scores:"
+"[first player]: [their score], [second player]: [their score]"
+    This is printed after every game, with scores updated accordingly
+    The order of names in the scores list remains consistent throughout following games
+"Keep playing? (type 'exit' to stop playing)" as prompted
+    If 'exit' is input, script will end
+    If anything else is input, a new game will start with the same players and scores carried over
+    The order of play alternates between games
+
+If play continues:
+    Resets appropriate variables and loops back to the start of the game process
+    All following games will have "It is [appropriate starting player]'s turn to start."
+        The message will use the correct apostrophe choice based on whether the player's name ends with an 's':
+        e.g. "It is Louis' turn to start." or "It is Cam's turn to start."
+        (it is a pet hate of mine when sites and automated responses get this wrong, so I wanted to make sure my game got it right)
+If play does not continue:
+    "Final Scores:"
+    "[first player]: [their total score], [second player]: [their total score], Total games = [game count]"
+    "[overallwinner] is the winner!"
+    "Thank you for playing!"
+    Script ends
